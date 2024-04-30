@@ -18,8 +18,8 @@ def login():
     db = mysql.connector.connect(
                 host="localhost",
                 user="root",  # replace with your MySQL username
-                password="tanman135", 
-                database = "database1"   # replace with your MySQL password
+                password="s@mrudh1", 
+                database = "expensetracker"   # replace with your MySQL password
     )
     # Validate against the database
     cursor = db.cursor()
@@ -30,6 +30,8 @@ def login():
         mb.showinfo("Login Successful", "Welcome, " + username + "!")    
         result = mb.askyesno("Question", "Do you want to proceed?")
         if result:
+            payee = "Some Payee"  # Replace "Some Payee" with the actual value
+
             root_login.destroy()
             open_tracker(username, datetime.datetime.now().date(), payee)
             
@@ -45,8 +47,8 @@ def open_tracker(username, date, payee):
     db = mysql.connector.connect(
             host="localhost",
             user="root",  # replace with your MySQL username
-            password="tanman135",  # replace with your MySQL password
-            database="database1"
+            password="s@mrudh1",  # replace with your MySQL password
+            database="expensetracker"
         )
     cursor = db.cursor()
 
@@ -338,7 +340,7 @@ canvas = tk.Canvas(root_login, width=475, height=300)
 canvas.pack()
 
 # Load the background image
-background_image = ImageTk.PhotoImage(Image.open(r"C:\Users\Ashish\OneDrive\Documents\OIP.jpeg"))
+background_image = ImageTk.PhotoImage(Image.open(r"C:\Users\samru\Downloads\OIP.jpeg"))
 canvas.create_image(0, 0, anchor=NW, image=background_image)
 
 # Create and place widgets on top of the background for login
@@ -377,8 +379,8 @@ button_register_window = canvas.create_window(120, 190, anchor=NW, window=button
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="tanman135",
-    database="database1"
+    password="s@mrudh1",
+    database="expensetracker"
 )
 
 # Create a cursor object
@@ -404,8 +406,8 @@ db.commit()
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="tanman135",
-    database="database1"
+    password="s@mrudh1",
+    database="expensetracker"
 )
 
 # Start the Tkinter event loop
