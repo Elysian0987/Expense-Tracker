@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-The Expense Tracker is a Python-based desktop application developed as part of an internship under the Department of Information Technology at K. J. Somaiya College of Engineering. It enables users to record, manage, and analyze personal financial data using a GUI interface with integrated database support and visualization features.
+The Expense Tracker is a Python-based desktop application developed as part of an SY internship under the Department of Information Technology at K. J. Somaiya College of Engineering. It enables users to record, manage, and analyze personal financial data using a GUI interface with integrated database support and visualization features.
 
 This tool facilitates structured logging of daily expenses and provides meaningful insights through analytical features, bridging the gap between raw data and actionable financial understanding.
 
