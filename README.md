@@ -1,4 +1,3 @@
-
 # Expense Tracker - Python-Based Personal Finance Analysis Tool
 
 ## Project Overview
@@ -55,68 +54,111 @@ The application uses a MySQL table named `ExpenseTracker` with the following fie
   - `tkcalendar`
   - `Pillow`
 
-### Steps
+### Installation & Setup
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Elysian0987/Expense-Tracker
-   cd Expense-Tracker
-   ```
+#### 1. Clone the Repository
 
-2. Install dependencies:
+```bash
+git clone https://github.com/Elysian0987/Expense-Tracker
+cd Expense-Tracker
+```
 
-   ```bash
-   pip install mysql-connector-python matplotlib tkcalendar pillow
-   ```
+#### 2. Install Required Dependencies
 
-3. Configure MySQL credentials in the script:
+```bash
+pip install mysql-connector-python matplotlib tkcalendar pillow
+```
 
-   ```python
-   db = mysql.connector.connect(
-       host="localhost",
-       user="your_username",
-       password="your_password",
-       database="database1"
-   )
-   ```
+#### 3. Database Setup
 
-4. Run the application:
+##### Step 1: Create Database
+Connect to your MySQL server and create a new database:
 
-   ```bash
-   python expense_tracker.py
-   ```
+```sql
+CREATE DATABASE database1;
+```
+
+##### Step 2: Select Database
+```sql
+USE database1;
+```
+
+##### Step 3: Create Table Schema
+Run the following SQL script to create the required table structure:
+
+```sql
+CREATE TABLE ExpenseTracker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    Payee VARCHAR(255) NOT NULL,
+    Description TEXT,
+    Amount FLOAT NOT NULL,
+    ModeOfPayment VARCHAR(255)
+);
+```
+
+#### 4. Configure MySQL Credentials
+
+Open the `expense_tracker.py` file and update the database connection details with your MySQL credentials:
+
+```python
+db = mysql.connector.connect(
+    host="localhost",
+    user="your_username",        # Replace with your MySQL username
+    password="your_password",    # Replace with your MySQL password
+    database="database1"
+)
+```
+
+#### 5. Run the Application
+
+```bash
+python expense_tracker.py
+```
 
 ## Usage Guide
 
-* Add a new expense by filling in all fields and selecting the appropriate category and payment method.
-* View all expenses in the scrollable table.
-* Edit or delete selected records directly from the table.
-* Use "Convert to Words" to view expense details in natural language before confirming.
-* Use the visualization feature to generate a bar chart of expenses by category.
-* Clear all fields or delete all records using respective actions.
+- Add a new expense by filling in all fields and selecting the appropriate category and payment method.
+- View all expenses in the scrollable table.
+- Edit or delete selected records directly from the table.
+- Use "Convert to Words" to view expense details in natural language before confirming.
+- Use the visualization feature to generate a bar chart of expenses by category.
+- Clear all fields or delete all records using respective actions.
 
 ## Learning Outcomes
 
 This project was developed as part of a focused internship module, emphasizing:
 
-* GUI programming using Tkinter
-* Relational database integration using MySQL
-* Data visualization using Matplotlib
-* Real-world software design and development practices
-* Collaborative version control via GitHub
+- GUI programming using Tkinter
+- Relational database integration using MySQL
+- Data visualization using Matplotlib
+- Real-world software design and development practices
+- Collaborative version control via GitHub
 
 ## Future Enhancements
 
-* User authentication and session management
-* Multi-user database support
-* Export data as CSV or PDF
-* Budget limit tracking and alerts
-* Time-series analytics for trends across custom periods
-* Modular code architecture and error logging
+- User authentication and session management
+- Multi-user database support
+- Export data as CSV or PDF
+- Budget limit tracking and alerts
+- Time-series analytics for trends across custom periods
+- Modular code architecture and error logging
 
 ## Acknowledgments
 
 Developed under the guidance of Prof. Vaibhav Chunekar and Prof. Anagha Raich as part of the in-house internship at K. J. Somaiya College of Engineering, Department of Information Technology.
+
+## Contributing
+
+While this project was completed as part of an academic internship, contributions or suggestions for improvement are still welcome.
+
+If you'd like to contribute, please follow these steps:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
+4. Push to the Branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
 ## License
 
