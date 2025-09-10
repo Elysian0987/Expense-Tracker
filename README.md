@@ -117,3 +117,9 @@ This project was developed as part of a focused internship module, emphasizing:
 ## Acknowledgments
 
 Developed under the guidance of Prof. Vaibhav Chunekar and Prof. Anagha Raich as part of the in-house internship at K. J. Somaiya College of Engineering, Department of Information Technology.
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is open-source under the terms of the MIT License. See the [LICENSE](LICENSE.md) file for details.
